@@ -10,7 +10,7 @@ public abstract class Bill {
 	private Map<Item,Integer> itemList;
 	private float taxAmount;
 	private float discountAmount;
-	private double billAmount;
+	private double totalAmount;
 	
 	protected Bill(String id, Customer customer, String status, Map<Item, Integer> itemList, float taxAmount,
 			float discountAmount, double billAmount) {
@@ -20,7 +20,7 @@ public abstract class Bill {
 		this.itemList = itemList;
 		this.taxAmount = taxAmount;
 		this.discountAmount = discountAmount;
-		this.billAmount = billAmount;
+		this.totalAmount = billAmount;
 	}
 	
 	public String getStatus() {
@@ -61,10 +61,10 @@ public abstract class Bill {
 		this.discountAmount = discountAmount;
 	}
 	public double getBillAmount() {
-		return billAmount;
+		return totalAmount;
 	}
 	public void setBillAmount(double billAmount) {
-		this.billAmount = billAmount;
+		this.totalAmount = billAmount;
 	}
 	
 }

@@ -5,7 +5,6 @@ public abstract class Receipt {
 	private Bill bill;
 	
 	protected Receipt(String id, Bill bill) {
-		super();
 		this.id = id;
 		this.bill = bill;
 	}

@@ -2,10 +2,21 @@ package com.shoppingcartapp.model;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
+
 public abstract class Customer {
 
+	@Pattern(regexp="")
+	@NotNull
 	private String id;
+	
+	@NotNull
 	private String name;
+	
+	@Past
+	@NotNull
 	private Date dob;
 	
 	public String getId() {

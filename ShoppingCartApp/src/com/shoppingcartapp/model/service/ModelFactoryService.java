@@ -1,5 +1,6 @@
 package com.shoppingcartapp.model.service;
 
+import java.util.List;
 import java.util.Map;
 
 import com.shoppingcartapp.model.Bill;
@@ -22,7 +23,7 @@ public class ModelFactoryService {
 		return new ReceiptImpl(id,bill);
 	}
 	
-	public ShoppingCart createShoppingCart(Map<Item, Integer> items, double totalValue){
-		return new ShoppingCartImpl(items,totalValue);
+	public ShoppingCart createShoppingCart(List<Item> items, List<Integer> quantities, double totalValue){
+		return new ShoppingCartImpl(items, quantities, totalValue);
 	}
 }
