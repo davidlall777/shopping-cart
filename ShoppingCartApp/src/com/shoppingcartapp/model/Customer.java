@@ -1,18 +1,13 @@
 package com.shoppingcartapp.model;
 
-public abstract class Item {
+import java.util.Date;
+
+public abstract class Customer {
 
 	private String id;
 	private String name;
-	private String desc;
-	private double price;
+	private Date dob;
 	
-	public double getPrice() {
-		return price;
-	}
-	public void setPrice(double price) {
-		this.price = price;
-	}
 	public String getId() {
 		return id;
 	}
@@ -25,11 +20,11 @@ public abstract class Item {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDesc() {
-		return desc;
+	public Date getDob() {
+		return dob;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDob(Date dob) {
+		this.dob = dob;
 	}
 	
 }
